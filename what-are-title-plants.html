@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>What are Title Plants</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-light container">
+    <div class="min-vh-100">
+      <div id="header-container"></div>
+      <div class="container-sm col-md-8 px-5">
+        <h1>ABOUT TITLE PLANTS</h1>
+        <div class="accordion accordion-flush my-5" id="accordionFlushExample">
+          <div class="accordion-item pb-3 px-3 my-2">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="true"
+                aria-controls="flush-collapseOne"
+              >
+                What is a Title Plant?
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                A title plant, sometimes called an abstract plant, is a
+                collection of recorded documents that track the history of a
+                real estate parcel. States require that these records go back
+                either to the original land grant or a set number of years,
+                typically 20-50 years. Each day, new data is added as recorded
+                documents are indexed and placed into the plant.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item py-3 px-3 my-2">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+                Where Are Title Plants Located?
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Modern title plants are digital and virtual, stored on
+                large-scale systems called Storage Area Networks (SANs), which
+                house millions of documents. These SANs are redundant, meaning
+                if one drive fails, others take over. The data is also backed up
+                in the cloud for security. While original title plants were
+                paper-based and later moved to film (such as 16mm film,
+                microfilm, and aperture cards), modern plants are now digital.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item py-3 px-3 my-2">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+                How Large Are Title Plants?
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                The size of a title plant depends on the number of real estate
+                parcels and transactions in a county. For example, smaller
+                counties with fewer parcels may have fewer than a million
+                documents, while larger counties like King County, WA, could
+                have tens of millions. Check out Kittitas County, WA, with a
+                population under 50,000 and around 600,000 recorded documents,
+                compared to King County's 27.6 million documents.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item py-3 px-3 my-2">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFour"
+                aria-expanded="false"
+                aria-controls="flush-collapseFour"
+              >
+                Why Are Title Plants Necessary?
+              </button>
+            </h2>
+            <div
+              id="flush-collapseFour"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                In many Northwestern States, access to a title plant is required
+                to issue title insurance. However, title plant data is often
+                restricted and not shared outside of the owner’s business. This
+                means only a few title agents in some counties may have their
+                own title plant. Competitors would need to build or purchase
+                their own plant to enter the market.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer-container"></div>
+
+    <script>
+      // Fetch and insert the header.html content dynamically
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+          // Get all the anchor elements in the navbar
+          const navLinks = document.querySelectorAll("nav a");
+
+          // Loop through all links and check if their href matches the current URL
+          navLinks.forEach((link) => {
+            if (link.href === window.location.href) {
+              link.setAttribute("aria-current", "page");
+              link.classList.add("active"); // Optional: Add an active class for visual feedback
+              link.classList.add("bg-secondary"); // Optional: Add an active class for visual feedback
+              link.classList.add("text-white"); // Optional: Add an active class for visual feedback
+            } else {
+              link.removeAttribute("aria-current");
+              link.classList.remove("active");
+              link.classList.remove("bg-secondary"); // Optional: Add an active class for visual feedback
+              link.classList.remove("text-white"); // Optional: Add an active class for visual feedback
+            }
+          });
+        });
+    </script>
+    <script>
+      // Fetch and insert the header.html content dynamically
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>What We Do</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-light container">
+    <div class="min-vh-100">
+      <div id="header-container"></div>
+      <div class="container px-5">
+        <div class="row">
+          <!-- Left side: Title and Description -->
+          <div class="col-md-4">
+            <h2 class="mb-4">WHAT WE DO</h2>
+            <p class="mb-5">
+              TPS owns title plants across the Northwest and Hawaii and has
+              access to title data nationwide. We make these plants available
+              for purchase, lease, and subscription.
+            </p>
+          </div>
+
+          <!-- Right side: Cards (Single Column) -->
+          <div class="col-md-8">
+            <div class="mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">INDEXING</h5>
+                  <p class="card-text">
+                    We index both our own title plants and those for others to
+                    streamline searches and improve accessibility.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">PURCHASING TITLE PLANTS</h5>
+                  <p class="card-text">
+                    We purchase title plants from across the United States,
+                    expanding our network and resources.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">VALUATIONS AND APPRAISALS</h5>
+                  <p class="card-text">
+                    We assist buyers and sellers of title plants in establishing
+                    their value, offering professional appraisals.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">EVALUATION AND AUDITING</h5>
+                  <p class="card-text">
+                    We help evaluate title plants, supporting underwriters and
+                    state audits to ensure compliance and accuracy.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">MARKETPLACE ACCESS</h5>
+                  <p class="card-text">
+                    We provide a marketplace where title plant buyers and
+                    sellers can connect, browse, and shop for plants.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer-container"></div>
+
+    <script>
+      // Fetch and insert the header.html content dynamically
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+          // Get all the anchor elements in the navbar
+          const navLinks = document.querySelectorAll("nav a");
+
+          // Loop through all links and check if their href matches the current URL
+          navLinks.forEach((link) => {
+            if (link.href === window.location.href) {
+              link.setAttribute("aria-current", "page");
+              link.classList.add("active"); // Optional: Add an active class for visual feedback
+              link.classList.add("bg-secondary"); // Optional: Add an active class for visual feedback
+              link.classList.add("text-white"); // Optional: Add an active class for visual feedback
+            } else {
+              link.removeAttribute("aria-current");
+              link.classList.remove("active");
+              link.classList.remove("bg-secondary"); // Optional: Add an active class for visual feedback
+              link.classList.remove("text-white"); // Optional: Add an active class for visual feedback
+            }
+          });
+        });
+    </script>
+    <script>
+      // Fetch and insert the header.html content dynamically
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
